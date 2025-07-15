@@ -1,7 +1,7 @@
 Event Management API
 This is a REST API built using Node.js, Express, and PostgreSQL for managing events and user registrations. It supports CRUD operations, registration logic, and business rules like preventing duplicate registrations and enforcing event capacity limits.
 
-✅ Features
+ Features
 Create and manage events
 
 Register and cancel event registrations
@@ -64,30 +64,22 @@ Edit
 npm run dev
 API will run on http://localhost:5000
 
-📌 API Endpoints
-Postman Collection: Click here to open
+!! API Endpoints !!
+Postman Collection: https://suyash-9446953.postman.co/workspace/Suyash's-Workspace~5f6ecb9f-cdd9-4d5a-8747-0270e794743a/collection/45090808-5130e2fd-7f56-4068-84e3-a4414c79684d?action=share&creator=45090808
 
-👤 User Routes
+ User Routes
 Create User
 
-bash
-Copy
-Edit
+
 POST /api/users
 Request
 
-json
-Copy
-Edit
 {
   "name": "Suyash Pathak",
   "email": "suyash@example.com"
 }
 Response
 
-json
-Copy
-Edit
 {
   "message": "User created successfully",
   "user": {
@@ -98,22 +90,15 @@ Edit
 }
 Get All Users
 
-bash
-Copy
-Edit
 GET /api/users
 📅 Event Routes
 Create Event
 
-bash
-Copy
-Edit
+
 POST /api/events
 Request
 
-json
-Copy
-Edit
+
 {
   "title": "Tech Event",
   "datetime": "2025-08-15T10:00:00Z",
@@ -122,78 +107,50 @@ Edit
 }
 Response
 
-json
-Copy
-Edit
 {
   "message": "Event created successfully",
   "eventId": 1
 }
 Get Event Details
 
-bash
-Copy
-Edit
+
 GET /api/events/:id
 Register for Event
 
-bash
-Copy
-Edit
+
 POST /api/events/:id/register
 Request
 
-json
-Copy
-Edit
 {
   "userId": 1
 }
 Response
 
-json
-Copy
-Edit
 {
   "message": "User registered successfully"
 }
 Cancel Registration
 
-bash
-Copy
-Edit
 DELETE /api/events/:id/register
 Request
 
-json
-Copy
-Edit
 {
   "userId": 1
 }
 List Upcoming Events
 
-swift
-Copy
-Edit
 GET /api/events/upcoming/list
 Event Stats
 
-bash
-Copy
-Edit
 GET /api/events/:id/stats
 Response
 
-json
-Copy
-Edit
 {
   "totalRegistrations": 2,
   "remainingCapacity": 198,
   "percentageUsed": "1%"
 }
-✅ Business Rules
+Business Rules
 Capacity cannot exceed 1000
 
 Cannot register for past events
@@ -204,10 +161,10 @@ Events sorted by date → location
 
 Transactions ensure concurrency safety
 
-✅ Testing
+Testing
 Use Postman or cURL
 
 For POST/DELETE, select Body → raw → JSON in Postman
 
-👨‍💻 Author
+Author
 Suyash Pathak
